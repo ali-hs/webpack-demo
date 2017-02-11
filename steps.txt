@@ -14,3 +14,19 @@ create webpack.config.js
 
 to run webpack easily, add it as npm script
 "build": "webpack"
+
+--------Automatic browser refresh on changes---------
+install webpack dev server
+npm install webpack-dev-server -D
+
+add npm script in package.json to launch webpack dev server
+"start": "webpack-dev-server --env development",
+"build": "webpack --env production"
+
+At this stage changes in code and save should auto refresh the app in the browser.
+
+Changes in webapack.config.js requires to restart the dev server
+To handle this case we can use nodemon plugin that watches for changes in this file and auto restart the webpack-dev-server
+npm install nodemon -D
+change the package.json and update "start" script in
+"start": "nodemon --watch webpack.config.js --exec\"webpack-dev-server --env development\""

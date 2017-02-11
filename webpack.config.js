@@ -7,7 +7,7 @@ const PATHS  = {
   build: path.join(__dirname, 'build'),
 }
 
-module.exports = {
+const common = {
   entry: {
     app: PATHS.app,
   },
@@ -20,5 +20,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack demo',
     }),
-  ],  
+  ],
 };
+
+module.exports = function( env ) {
+  console.log("environment:", env);
+
+  return common;
+}
