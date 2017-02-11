@@ -30,3 +30,11 @@ To handle this case we can use nodemon plugin that watches for changes in this f
 npm install nodemon -D
 change the package.json and update "start" script in
 "start": "nodemon --watch webpack.config.js --exec\"webpack-dev-server --env development\""
+
+----------HMR--------------------
+separate configrations for development and production.
+
+devServer configurations for HMR.
+
+Need to explicitly add support for it in code or use libraries which has default support for it.
+e.g. redux, react etc.
