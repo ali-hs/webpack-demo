@@ -1,0 +1,16 @@
+install webpack
+npm install webpack -D
+
+create structure of the app
+app/
+- index.js
+- component.js
+build/
+
+to create a html template we can install html-web-pack plugin
+npm instal html-webpack-plugin -D
+
+create webpack.config.js
+
+to run webpack easily, add it as npm script
+"build": "webpack"
