@@ -38,3 +38,14 @@ devServer configurations for HMR.
 
 Need to explicitly add support for it in code or use libraries which has default support for it.
 e.g. redux, react etc.
+
+---------Linting-----------------
+install eslint using the following command.
+npm install eslint -D
+
+install eslint-loader that will be called by webpack during bundling.
+npm install eslint-loader -D
+
+its probably better to add eslint as precommit hook as otherwise it might slow down the bulding time.
+
+We can enforce same configs using .editorconfig file which most of the IDE's and editors support.
