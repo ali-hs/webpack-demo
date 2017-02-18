@@ -49,3 +49,7 @@ npm install eslint-loader -D
 its probably better to add eslint as precommit hook as otherwise it might slow down the bulding time.
 
 We can enforce same configs using .editorconfig file which most of the IDE's and editors support.
+
+---------Composing configurations---------------
+
+install webpack-merge plugin to merge configurations from smaller parts.
