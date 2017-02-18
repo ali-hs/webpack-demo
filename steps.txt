@@ -53,3 +53,12 @@ We can enforce same configs using .editorconfig file which most of the IDE's and
 ---------Composing configurations---------------
 
 install webpack-merge plugin to merge configurations from smaller parts.
+we can split configurations in multiple parts and compose those parts to make a meaningful webpack config file.
+
+--------Loading styles-----------------
+install css-loader and style-loader
+
+css-loader treats all matching imports and @url as regular es6 imports.
+
+style-loader picks up the output of css-loader and injects css into the resulting bundle. This will be inlined javascript by default, and it implements the HMR interface.
+For production use ExtractTextPlugin to generate separate css file.

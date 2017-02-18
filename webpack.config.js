@@ -26,6 +26,7 @@ const common = merge( [
       }),
     ],
   },
+  parts.loadCSS(),
 ]);
 
 function production() {

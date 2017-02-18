@@ -48,3 +48,19 @@ exports.lintJavascript = function({include, exclude, options}) {
     },
   };
 };
+
+exports.loadCSS = function({include, exclude} = {} ) {
+  return {
+    module: {
+      rules: [
+        {
+          test:/\.css$/,
+          include,
+          exclude,
+
+          use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
+  };
+};
